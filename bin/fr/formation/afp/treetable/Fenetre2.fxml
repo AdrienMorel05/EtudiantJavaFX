@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="fenetre2" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A6D5E5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.formation.afp.treetable.ControllerFenetre2">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Fermer la page" />
+                  <MenuItem mnemonicParsing="false" text="Fermer le programme" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edition">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Copie" />
+                  <MenuItem mnemonicParsing="false" text="Couper" />
+                  <MenuItem mnemonicParsing="false" text="Coller" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Aide...">
+            <items>
+              <MenuItem mnemonicParsing="false" text="AIde" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="272.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AJOUT DES ETUDIANTS" textAlignment="CENTER" wrappingWidth="339.6708984375">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Separator layoutX="-2.0" layoutY="541.0" prefHeight="2.0" prefWidth="900.0" />
+      <Button fx:id="annuler2" layoutX="736.0" layoutY="555.0" mnemonicParsing="false" onAction="#annuler2" prefHeight="31.0" prefWidth="125.0" text="Annuler" />
+      <Button fx:id="enregistrer" layoutX="579.0" layoutY="555.0" mnemonicParsing="false" onAction="#enregistrerEtudiant" prefHeight="31.0" prefWidth="125.0" text="Enregistrer" />
+      <Text layoutX="448.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" textAlignment="RIGHT" wrappingWidth="136.6708984375">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <Text layoutX="442.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom" textAlignment="RIGHT" wrappingWidth="136.6708984375">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <Text layoutX="448.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date de Naissance" textAlignment="RIGHT" wrappingWidth="136.6708984375">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <TextField fx:id="InfoNom" layoutX="642.0" layoutY="158.0" />
+      <TextField fx:id="InfoPrenom" layoutX="643.0" layoutY="260.0" />
+      <Button fx:id="browser" layoutX="117.0" layoutY="479.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="171.0" text="Changer la photo" />
+      <Label fx:id="nomManquant" layoutX="643.0" layoutY="129.0" prefHeight="21.0" prefWidth="187.0" text="Nom manquant" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="prénomManquant" layoutX="643.0" layoutY="233.0" prefHeight="21.0" prefWidth="187.0" text="Prénom manquant" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateManquante" disable="true" layoutX="643.0" layoutY="339.0" prefHeight="21.0" prefWidth="208.0" text="Date de naissance manquante" textFill="RED" visible="false">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="InfoDate" layoutX="642.0" layoutY="368.0" />
+      <Label  layoutX="51.0" layoutY="138.0">
+         <graphic>
+            <ImageView fitHeight="284.0" fitWidth="304.0">
+               <image>
+                  <Image url="@../../../../../image/téléchargement.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A6D5E5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.formation.afp.treetable.ControllerTableView">
+   <children>
+            <MenuBar prefHeight="30.0" prefWidth="900.0">
+              <menus>
+                <Menu fx:id="menuFichier" mnemonicParsing="false" text="Fichier">
+                  <items>
+                    <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#itemclose" text="Close" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="menuAjout" mnemonicParsing="false" text="Ajouter Etudiant">
+                    <items>
+                      <MenuItem fx:id="itemajouteretudiant" mnemonicParsing="false" onAction="#itemajouteretudiant" text="Ajouter un Etudiant" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#afficheEtudiant" text="Liste Etudiant" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Aide">
+                  <items>
+                    <MenuItem fx:id="itemmodedempoi" mnemonicParsing="false" onAction="#itemmodedemploi" text="Mode d'emploi" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Text layoutX="278.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue dans LogiEtudiant !" wrappingWidth="343.6708984375">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="bouttonquitter" layoutX="778.0" layoutY="562.0" mnemonicParsing="false" onAction="#itemclose" prefHeight="31.0" prefWidth="100.0" text="Quitter" />
+            <Button fx:id="boutonModEtudiant" layoutX="671.0" layoutY="422.0" mnemonicParsing="false" onAction="#modifierEtudiant" prefHeight="31.0" prefWidth="214.0" text="Modifier Etudiant" />
+            <Separator layoutY="555.0" prefHeight="3.0" prefWidth="900.0" />
+      <ScrollPane fx:id="scrollTable" layoutX="14.0" layoutY="89.0" prefHeight="416.0" prefWidth="645.0">
+         <content>
+            <TableView fx:id="tableEtudiant" prefHeight="414.0" prefWidth="649.0" style="-fx-background-color: grey;">
+              <columns>
+                  <TableColumn fx:id="colonneid" prefWidth="48.0" text="ID" />
+                <TableColumn fx:id="colonnenom" minWidth="8.0" prefWidth="140.0" text="Nom" />
+                <TableColumn fx:id="colonneprenom" prefWidth="142.0" text="Prénom" />
+                  <TableColumn fx:id="colonnedate" prefWidth="163.0" text="Date de Naissance" />
+                  <TableColumn fx:id="colonnenote" minWidth="3.0" prefWidth="124.0" text="Note" />
+                <!--   <TableColumn fx:id="colonneMod" prefWidth="168.0" text="Modifier/Supprimer" /> -->
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="boutonsuppEtudiant" layoutX="671.0" layoutY="367.0" mnemonicParsing="false" onAction="#supprimerEtudiant" prefHeight="31.0" prefWidth="214.0" text="Supprimer Etudiant" />
+      <Button fx:id="boutonajout" layoutX="671.0" layoutY="474.0" mnemonicParsing="false" onAction="#itemajouteretudiant" text="Enregitrer un nouvel étudiant" />
+      <Button fx:id="boutonafficheEtudiant" layoutX="671.0" layoutY="89.0" mnemonicParsing="false" onAction="#afficheEtudiant" prefHeight="31.0" prefWidth="214.0" text="Rafraichir le Tableau" />
+      <TextField fx:id="textfieldrecherche" layoutX="243.0" layoutY="512.0" />
+      <Text layoutX="126.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recherche" wrappingWidth="108.7451171875">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Text>
+           <!--  <Pane fx:id="fenetre2" layoutX="1.0" prefHeight="435.0" prefWidth="615.0" visibile="false">
+              
+            </Pane>
+       -->
+   </children>
+</AnchorPane>
